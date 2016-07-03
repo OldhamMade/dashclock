@@ -32906,7 +32906,7 @@ var _user$project$WeatherApp$Request = function (a) {
 	return {ctor: 'Request', _0: a};
 };
 var _user$project$WeatherApp$subscriptions = function (model) {
-	return A2(_elm_lang$core$Time$every, _elm_lang$core$Time$second * 30, _user$project$WeatherApp$Request);
+	return A2(_elm_lang$core$Time$every, _elm_lang$core$Time$minute * 3, _user$project$WeatherApp$Request);
 };
 var _user$project$WeatherApp$main = {
 	main: _elm_lang$html$Html_App$program(

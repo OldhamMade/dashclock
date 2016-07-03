@@ -86,7 +86,7 @@ update msg model =
 
 subscriptions : Model -> Sub Msg
 subscriptions model =
-  Time.every (Time.second * 120) Request
+  Time.every (Time.minute * 3) Request
 
 
 -- VIEW

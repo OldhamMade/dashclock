@@ -1,12 +1,10 @@
 defmodule Dashclock.Facts.MoonPhase do
   def get(lat: lat, lon: lon) do
     url = url_for(lat, lon)
-    response = HTTPotion.get(url)
-    {:ok, data} = Poison.decode(response.body)
-    parsed = Poison.decode!(data)
+    response = HTTPotion.get(url, [timeout: 50_000])
+    parsed = Poison.decode!(response.body)
 
-    phase = moon_phase(parsed)
-    phase
+    moon_phase(parsed)
   end
 
   def moon_phase(parsed) do

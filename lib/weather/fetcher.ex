@@ -1,6 +1,6 @@
 defmodule Dashclock.Weather.Fetcher do
   def get(lat: lat, lon: lon) do
-    response = HTTPotion.get(url_for(lat, lon))
+    response = HTTPotion.get(url_for(lat, lon), [timeout: 50_000])
     Poison.decode!(response.body)
   end
 
