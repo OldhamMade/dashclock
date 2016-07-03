@@ -112,24 +112,25 @@ body {
   /* line 12, /Users/phillipoldham/Projects/dashclock/web/sass/tflstatus.sass */
   #tfl-status-container div {
     font-size: 30px;
-    line-height: 50px;
-    padding-left: 25px; }
-    /* line 16, /Users/phillipoldham/Projects/dashclock/web/sass/tflstatus.sass */
+    line-height: 35px;
+    padding-left: 25px;
+    padding-top: 4px; }
+    /* line 17, /Users/phillipoldham/Projects/dashclock/web/sass/tflstatus.sass */
     #tfl-status-container div i {
       font-size: 50px;
       position: absolute;
       top: 0;
       left: 0; }
-  /* line 22, /Users/phillipoldham/Projects/dashclock/web/sass/tflstatus.sass */
+  /* line 23, /Users/phillipoldham/Projects/dashclock/web/sass/tflstatus.sass */
   #tfl-status-container .loading i {
     color: #F60; }
-  /* line 25, /Users/phillipoldham/Projects/dashclock/web/sass/tflstatus.sass */
+  /* line 26, /Users/phillipoldham/Projects/dashclock/web/sass/tflstatus.sass */
   #tfl-status-container .problems i {
     color: #F00; }
-  /* line 28, /Users/phillipoldham/Projects/dashclock/web/sass/tflstatus.sass */
+  /* line 29, /Users/phillipoldham/Projects/dashclock/web/sass/tflstatus.sass */
   #tfl-status-container .ok i {
     color: #0C0; }
-  /* line 31, /Users/phillipoldham/Projects/dashclock/web/sass/tflstatus.sass */
+  /* line 32, /Users/phillipoldham/Projects/dashclock/web/sass/tflstatus.sass */
   #tfl-status-container .unknown i {
     color: #99F; }
 
@@ -170,7 +171,7 @@ body {
     #weather-container div#day-0 .temp-min {
       position: absolute;
       top: 226px;
-      left: 90px;
+      left: 85px;
       border-top: 1px solid #AAA;
       line-height: 1.6em;
       color: #AAA; }
@@ -178,14 +179,14 @@ body {
     #weather-container div#day-0 .temp-max {
       position: absolute;
       top: 202px;
-      left: 90px;
+      left: 85px;
       line-height: 1.6em;
       color: #AAA; }
     /* line 49, /Users/phillipoldham/Projects/dashclock/web/sass/weather.sass */
     #weather-container div#day-0 .precip {
       position: absolute;
-      bottom: 0;
-      right: 0;
+      bottom: 5px;
+      left: 110px;
       font-size: 30px;
       width: 120px; }
   /* line 56, /Users/phillipoldham/Projects/dashclock/web/sass/weather.sass */
@@ -228,14 +229,14 @@ body {
   #weather-container div#day-1 {
     position: absolute;
     left: 25px;
-    top: 260px;
+    top: 265px;
     opacity: .7;
     /* background: #122 */ }
   /* line 92, /Users/phillipoldham/Projects/dashclock/web/sass/weather.sass */
   #weather-container div#day-2 {
     position: absolute;
     left: 125px;
-    top: 260px;
+    top: 265px;
     opacity: .5;
     /* background: #132 */ }
 
