@@ -1,0 +1,97 @@
+#weather-container
+  position: absolute
+  font-family: "Nova Mono"
+  top: 100px
+  left: 40px
+  width: 500px
+  height: 250px
+
+  div.day
+    float: left
+
+    .icon
+      font-size: 50px
+
+  div#day-0
+    position: absolute
+    width: 250px
+    height: 250px
+
+    .icon
+      position: absolute
+      top: 50px
+      left: 0
+      line-height: 170px
+      font-size: 170px
+      text-align: center
+
+    .temp-current
+      position: absolute
+      top: 190px
+      left: 20px
+      font-size: 50px
+
+    .temp-min
+      position: absolute
+      top: 226px
+      left: 90px
+      border-top: 1px solid #AAA
+      line-height: 1.6em
+      color: #AAA
+
+    .temp-max
+      position: absolute
+      top: 202px
+      left: 90px
+      line-height: 1.6em
+      color: #AAA
+
+    .precip
+      position: absolute
+      bottom: 0
+      right: 0
+      font-size: 30px
+      width: 120px
+
+  div#day-1,
+  div#day-2
+    width: 100px
+    height: 100px
+
+    .icon
+      position: absolute
+      top: 10px
+
+    .temp-current
+      display: none
+
+    .temp-min,
+    .temp-max
+      position: absolute
+      bottom: 22px
+      line-height: 20px
+
+    .temp-max
+      font-size: 20px
+
+    .temp-min
+      left: 25px
+      color: #999
+
+    .precip
+      position: absolute
+      bottom: 0
+
+  div#day-1
+    position: absolute
+    left: 25px
+    top: 260px
+    opacity: .7
+    /* background: #122
+
+  div#day-2
+    position: absolute
+    left: 125px
+    top: 260px
+    opacity: .5
+    /* background: #132

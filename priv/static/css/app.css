@@ -1,0 +1,243 @@
+/* line 1, /Users/phillipoldham/Projects/dashclock/web/sass/clock.sass */
+#clock-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 280px;
+  height: 480px; }
+  /* line 8, /Users/phillipoldham/Projects/dashclock/web/sass/clock.sass */
+  #clock-container #day,
+  #clock-container #month,
+  #clock-container #year {
+    float: left; }
+  /* line 14, /Users/phillipoldham/Projects/dashclock/web/sass/clock.sass */
+  #clock-container #clock {
+    hight: 1%;
+    position: absolute;
+    bottom: -50px;
+    right: 15px;
+    font-size: 270px;
+    font-weight: 900;
+    font-family: 'digital-7_monomono'; }
+    /* line 23, /Users/phillipoldham/Projects/dashclock/web/sass/clock.sass */
+    #clock-container #clock #bg {
+      color: rgba(255, 255, 255, 0.12);
+      position: absolute;
+      bottom: 0; }
+      /* line 28, /Users/phillipoldham/Projects/dashclock/web/sass/clock.sass */
+      #clock-container #clock #bg .hours {
+        margin-bottom: -100px; }
+  /* line 31, /Users/phillipoldham/Projects/dashclock/web/sass/clock.sass */
+  #clock-container #hours {
+    margin-bottom: -100px; }
+  /* line 34, /Users/phillipoldham/Projects/dashclock/web/sass/clock.sass */
+  #clock-container #sep {
+    position: absolute;
+    top: 20px;
+    right: -10px;
+    color: #CCC;
+    width: 70px; }
+    /* line 41, /Users/phillipoldham/Projects/dashclock/web/sass/clock.sass */
+    #clock-container #sep.hidden {
+      visibility: hidden; }
+  /* line 44, /Users/phillipoldham/Projects/dashclock/web/sass/clock.sass */
+  #clock-container #date {
+    position: absolute;
+    top: 5px;
+    right: 19px;
+    font-size: 48px;
+    font-family: "digital-7_monomono"; }
+    /* line 51, /Users/phillipoldham/Projects/dashclock/web/sass/clock.sass */
+    #clock-container #date #day,
+    #clock-container #date #month,
+    #clock-container #date #year {
+      margin-left: 20px;
+      color: #BBB; }
+
+@font-face {
+  font-family: 'digital-7_monomono';
+  src: url("/fonts/digital-7-mono/digital-7-mono-webfont.eot");
+  src: url("/fonts/digital-7-mono/digital-7-mono-webfont.eot?#iefix") format("embedded-opentype");
+  src: url("/fonts/digital-7-mono/digital-7-mono-webfont.woff2") format("woff2");
+  src: url("/fonts/digital-7-mono/digital-7-mono-webfont.woff") format("woff");
+  src: url("/fonts/digital-7-mono/digital-7-mono-webfont.ttf") format("truetype");
+  src: url("/fonts/digital-7-mono/digital-7-mono-webfont.svg#digital-7_monomono") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'digital-7regular';
+  src: url("/fonts/digital-7/digital-7_-webfont.eot");
+  src: url("/fonts/digital-7/digital-7-webfont.eot?#iefix") format("embedded-opentype");
+  src: url("/fonts/digital-7/digital-7-webfont.woff2") format("woff2");
+  src: url("/fonts/digital-7/digital-7-webfont.woff") format("woff");
+  src: url("/fonts/digital-7/digital-7-webfont.ttf") format("truetype");
+  src: url("/fonts/digital-7/digital-7-webfont.svg#digital-7regular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/* line 25, /Users/phillipoldham/Projects/dashclock/web/sass/main.sass */
+body {
+  background: #111;
+  color: #FFF;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  font-family: "Oswald";
+  width: 800px;
+  height: 480px;
+  overflow: hidden; }
+
+/* line 36, /Users/phillipoldham/Projects/dashclock/web/sass/main.sass */
+#main-container {
+  margin: 0 auto;
+  text-align: left;
+  width: 800px;
+  height: 480px;
+  background: #000;
+  position: relative;
+  overflow: hidden; }
+
+/* line 1, /Users/phillipoldham/Projects/dashclock/web/sass/tflstatus.sass */
+#tfl-status-container {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  width: 500px;
+  height: 100px;
+  color: #FFF;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical; }
+  /* line 12, /Users/phillipoldham/Projects/dashclock/web/sass/tflstatus.sass */
+  #tfl-status-container div {
+    font-size: 30px;
+    line-height: 50px;
+    padding-left: 25px; }
+    /* line 16, /Users/phillipoldham/Projects/dashclock/web/sass/tflstatus.sass */
+    #tfl-status-container div i {
+      font-size: 50px;
+      position: absolute;
+      top: 0;
+      left: 0; }
+  /* line 22, /Users/phillipoldham/Projects/dashclock/web/sass/tflstatus.sass */
+  #tfl-status-container .loading i {
+    color: #F60; }
+  /* line 25, /Users/phillipoldham/Projects/dashclock/web/sass/tflstatus.sass */
+  #tfl-status-container .problems i {
+    color: #F00; }
+  /* line 28, /Users/phillipoldham/Projects/dashclock/web/sass/tflstatus.sass */
+  #tfl-status-container .ok i {
+    color: #0C0; }
+  /* line 31, /Users/phillipoldham/Projects/dashclock/web/sass/tflstatus.sass */
+  #tfl-status-container .unknown i {
+    color: #99F; }
+
+/* line 1, /Users/phillipoldham/Projects/dashclock/web/sass/weather.sass */
+#weather-container {
+  position: absolute;
+  font-family: "Nova Mono";
+  top: 100px;
+  left: 40px;
+  width: 500px;
+  height: 250px; }
+  /* line 9, /Users/phillipoldham/Projects/dashclock/web/sass/weather.sass */
+  #weather-container div.day {
+    float: left; }
+    /* line 12, /Users/phillipoldham/Projects/dashclock/web/sass/weather.sass */
+    #weather-container div.day .icon {
+      font-size: 50px; }
+  /* line 15, /Users/phillipoldham/Projects/dashclock/web/sass/weather.sass */
+  #weather-container div#day-0 {
+    position: absolute;
+    width: 250px;
+    height: 250px; }
+    /* line 20, /Users/phillipoldham/Projects/dashclock/web/sass/weather.sass */
+    #weather-container div#day-0 .icon {
+      position: absolute;
+      top: 50px;
+      left: 0;
+      line-height: 170px;
+      font-size: 170px;
+      text-align: center; }
+    /* line 28, /Users/phillipoldham/Projects/dashclock/web/sass/weather.sass */
+    #weather-container div#day-0 .temp-current {
+      position: absolute;
+      top: 190px;
+      left: 20px;
+      font-size: 50px; }
+    /* line 34, /Users/phillipoldham/Projects/dashclock/web/sass/weather.sass */
+    #weather-container div#day-0 .temp-min {
+      position: absolute;
+      top: 226px;
+      left: 90px;
+      border-top: 1px solid #AAA;
+      line-height: 1.6em;
+      color: #AAA; }
+    /* line 42, /Users/phillipoldham/Projects/dashclock/web/sass/weather.sass */
+    #weather-container div#day-0 .temp-max {
+      position: absolute;
+      top: 202px;
+      left: 90px;
+      line-height: 1.6em;
+      color: #AAA; }
+    /* line 49, /Users/phillipoldham/Projects/dashclock/web/sass/weather.sass */
+    #weather-container div#day-0 .precip {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      font-size: 30px;
+      width: 120px; }
+  /* line 56, /Users/phillipoldham/Projects/dashclock/web/sass/weather.sass */
+  #weather-container div#day-1,
+  #weather-container div#day-2 {
+    width: 100px;
+    height: 100px; }
+    /* line 61, /Users/phillipoldham/Projects/dashclock/web/sass/weather.sass */
+    #weather-container div#day-1 .icon,
+    #weather-container div#day-2 .icon {
+      position: absolute;
+      top: 10px; }
+    /* line 65, /Users/phillipoldham/Projects/dashclock/web/sass/weather.sass */
+    #weather-container div#day-1 .temp-current,
+    #weather-container div#day-2 .temp-current {
+      display: none; }
+    /* line 68, /Users/phillipoldham/Projects/dashclock/web/sass/weather.sass */
+    #weather-container div#day-1 .temp-min,
+    #weather-container div#day-1 .temp-max,
+    #weather-container div#day-2 .temp-min,
+    #weather-container div#day-2 .temp-max {
+      position: absolute;
+      bottom: 22px;
+      line-height: 20px; }
+    /* line 74, /Users/phillipoldham/Projects/dashclock/web/sass/weather.sass */
+    #weather-container div#day-1 .temp-max,
+    #weather-container div#day-2 .temp-max {
+      font-size: 20px; }
+    /* line 77, /Users/phillipoldham/Projects/dashclock/web/sass/weather.sass */
+    #weather-container div#day-1 .temp-min,
+    #weather-container div#day-2 .temp-min {
+      left: 25px;
+      color: #999; }
+    /* line 81, /Users/phillipoldham/Projects/dashclock/web/sass/weather.sass */
+    #weather-container div#day-1 .precip,
+    #weather-container div#day-2 .precip {
+      position: absolute;
+      bottom: 0; }
+  /* line 85, /Users/phillipoldham/Projects/dashclock/web/sass/weather.sass */
+  #weather-container div#day-1 {
+    position: absolute;
+    left: 25px;
+    top: 260px;
+    opacity: .7;
+    /* background: #122 */ }
+  /* line 92, /Users/phillipoldham/Projects/dashclock/web/sass/weather.sass */
+  #weather-container div#day-2 {
+    position: absolute;
+    left: 125px;
+    top: 260px;
+    opacity: .5;
+    /* background: #132 */ }
+
+
+/*# sourceMappingURL=app.css.map*/

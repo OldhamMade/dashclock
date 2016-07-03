@@ -1,0 +1,10 @@
+APIKeys:
+  forecast.io: "23441ba59d9294a1fabbab88c90b6dcc"
+  TFL:
+    id: "1f7d6c98"
+    key: "4460186a9dabfafa9b1a839072c50325"
+APICalls:
+  IP: "https://api.ipify.org"
+  Location: "http://ip-api.com/json/{ip}"
+  Weather: "https://api.forecast.io/forecast/{apikey}/{lat},{lon}?units=si"
+  TFL: "https://api.tfl.gov.uk/line/mode/tube/status?app_id={id}&app_key={key}"

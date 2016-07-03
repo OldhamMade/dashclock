@@ -1,0 +1,56 @@
+#clock-container
+  position: absolute
+  top: 0
+  right: 0
+  width: 280px
+  height: 480px
+  
+  #day,
+  #month,
+  #year
+    float: left
+
+
+  #clock
+    hight: 1%
+    position: absolute
+    bottom: -50px
+    right: 15px
+    font-size: 270px
+    font-weight: 900
+    font-family: 'digital-7_monomono'
+
+    #bg
+      color: rgba(255, 255, 255, .12)
+      position: absolute
+      bottom: 0
+
+      & .hours
+        margin-bottom: -100px
+
+  #hours
+    margin-bottom: -100px
+
+  #sep
+    position: absolute
+    top: 20px
+    right: -10px
+    color: #CCC
+    width: 70px
+
+    &.hidden
+      visibility: hidden
+
+  #date
+    position: absolute
+    top: 5px
+    right: 19px
+    font-size: 48px
+    font-family: "digital-7_monomono"
+
+    #day,
+    #month,
+    #year
+      margin-left: 20px
+      color: #BBB
+
