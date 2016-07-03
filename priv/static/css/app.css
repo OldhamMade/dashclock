@@ -173,37 +173,35 @@ body {
       top: 226px;
       left: 85px;
       border-top: 1px solid #AAA;
-      line-height: 1.6em;
-      color: #CCC; }
-    /* line 42, /Users/phillipoldham/Projects/dashclock/web/sass/weather.sass */
+      line-height: 1.6em; }
+    /* line 41, /Users/phillipoldham/Projects/dashclock/web/sass/weather.sass */
     #weather-container div#day-0 .temp-max {
       position: absolute;
       top: 202px;
       left: 85px;
-      line-height: 1.6em;
-      color: #CCC; }
-    /* line 49, /Users/phillipoldham/Projects/dashclock/web/sass/weather.sass */
+      line-height: 1.6em; }
+    /* line 47, /Users/phillipoldham/Projects/dashclock/web/sass/weather.sass */
     #weather-container div#day-0 .precip {
       position: absolute;
       bottom: 5px;
       left: 110px;
       font-size: 30px;
       width: 120px; }
-  /* line 56, /Users/phillipoldham/Projects/dashclock/web/sass/weather.sass */
+  /* line 54, /Users/phillipoldham/Projects/dashclock/web/sass/weather.sass */
   #weather-container div#day-1,
   #weather-container div#day-2 {
     width: 100px;
     height: 100px; }
-    /* line 61, /Users/phillipoldham/Projects/dashclock/web/sass/weather.sass */
+    /* line 59, /Users/phillipoldham/Projects/dashclock/web/sass/weather.sass */
     #weather-container div#day-1 .icon,
     #weather-container div#day-2 .icon {
       position: absolute;
       top: 10px; }
-    /* line 65, /Users/phillipoldham/Projects/dashclock/web/sass/weather.sass */
+    /* line 63, /Users/phillipoldham/Projects/dashclock/web/sass/weather.sass */
     #weather-container div#day-1 .temp-current,
     #weather-container div#day-2 .temp-current {
       display: none; }
-    /* line 68, /Users/phillipoldham/Projects/dashclock/web/sass/weather.sass */
+    /* line 66, /Users/phillipoldham/Projects/dashclock/web/sass/weather.sass */
     #weather-container div#day-1 .temp-min,
     #weather-container div#day-1 .temp-max,
     #weather-container div#day-2 .temp-min,
@@ -211,32 +209,29 @@ body {
       position: absolute;
       bottom: 22px;
       line-height: 20px; }
-    /* line 74, /Users/phillipoldham/Projects/dashclock/web/sass/weather.sass */
+    /* line 72, /Users/phillipoldham/Projects/dashclock/web/sass/weather.sass */
     #weather-container div#day-1 .temp-max,
     #weather-container div#day-2 .temp-max {
       font-size: 20px; }
-    /* line 77, /Users/phillipoldham/Projects/dashclock/web/sass/weather.sass */
+    /* line 75, /Users/phillipoldham/Projects/dashclock/web/sass/weather.sass */
     #weather-container div#day-1 .temp-min,
     #weather-container div#day-2 .temp-min {
-      left: 25px;
-      color: #CCC; }
-    /* line 81, /Users/phillipoldham/Projects/dashclock/web/sass/weather.sass */
+      left: 25px; }
+    /* line 78, /Users/phillipoldham/Projects/dashclock/web/sass/weather.sass */
     #weather-container div#day-1 .precip,
     #weather-container div#day-2 .precip {
       position: absolute;
       bottom: 0; }
-  /* line 85, /Users/phillipoldham/Projects/dashclock/web/sass/weather.sass */
+  /* line 82, /Users/phillipoldham/Projects/dashclock/web/sass/weather.sass */
   #weather-container div#day-1 {
     position: absolute;
     left: 25px;
-    top: 265px;
-    opacity: .9; }
-  /* line 91, /Users/phillipoldham/Projects/dashclock/web/sass/weather.sass */
+    top: 265px; }
+  /* line 87, /Users/phillipoldham/Projects/dashclock/web/sass/weather.sass */
   #weather-container div#day-2 {
     position: absolute;
     left: 125px;
-    top: 265px;
-    opacity: .9; }
+    top: 265px; }
 
 
 /*# sourceMappingURL=app.css.map*/
