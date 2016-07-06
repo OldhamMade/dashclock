@@ -86,7 +86,7 @@ update msg model =
 
 subscriptions : Model -> Sub Msg
 subscriptions model =
-  Time.every (Time.minute * 3) Request
+  Time.every (Time.minute * 5) Request
 
 
 -- VIEW
@@ -105,6 +105,7 @@ dayView pos data =
         [ iconView data
         , tempView data
         , precipView data
+        , div [ id "line" ] [ ]
         ]
 
 

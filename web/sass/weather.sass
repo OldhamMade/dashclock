@@ -1,7 +1,7 @@
 #weather-container
   position: absolute
   font-family: "Nova Mono"
-  top: 100px
+  top: 140px
   left: 40px
   width: 500px
   height: 250px
@@ -12,79 +12,100 @@
     .icon
       font-size: 50px
 
-  div#day-0
+  div#day-0,
+  div#day-1,
+  div#day-2
     position: absolute
-    width: 250px
-    height: 250px
+    width: 500px
+    height: 200px
 
     .icon
       position: absolute
-      top: 50px
+      width: 200px
+      height: 200px
+      top: 0
       left: 0
-      line-height: 170px
-      font-size: 170px
-      text-align: center
+      font-size: 150px
+      vertical-align: bottom
 
     .temp-current
       position: absolute
-      top: 190px
-      left: 20px
-      font-size: 50px
+      top: 20px
+      left: 200px
+      font-size: 100px
+      width: 120px
+      text-align: right
 
+    .temp-max,
     .temp-min
-      position: absolute
-      top: 226px
-      left: 85px
-      border-top: 1px solid #AAA
-      line-height: 1.6em
+      font-size: 30px
+      left: 340px
 
     .temp-max
       position: absolute
-      top: 202px
-      left: 85px
+      top: 44px
+      line-height: 1.6em
+
+    .temp-min
+      position: absolute
+      top: 90px
+      border-top: 1px solid #AAA
       line-height: 1.6em
 
     .precip
       position: absolute
-      bottom: 5px
-      left: 110px
+      /* top: 150px
+      /* left: 200px
+      top: 70px
+      left: 385px
       font-size: 30px
       width: 120px
 
   div#day-1,
   div#day-2
-    width: 100px
+    position: absolute
+    top: 200px
+    left: 0
+    width: 500px
     height: 100px
+    opacity: .8
 
     .icon
       position: absolute
-      top: 10px
+      width: 150px
+      height: 100px
+      top: 0
+      left: 0
+      font-size: 80px
+      vertical-align: middle
 
     .temp-current
       display: none
 
-    .temp-min,
+    .temp-max,
+    .temp-min
+      font-size: 24px
+      left: 150px
+
     .temp-max
       position: absolute
-      bottom: 22px
-      line-height: 20px
-
-    .temp-max
-      font-size: 20px
+      top: 10px
+      line-height: 1.6em
 
     .temp-min
-      left: 25px
+      position: absolute
+      top: 50px
+      border-top: 1px solid #AAA
+      line-height: 1.6em
 
     .precip
       position: absolute
-      bottom: 0
+      top: 36px
+      left: 180px
+      font-size: 20px
+      width: 120px
 
-  div#day-1
-    position: absolute
-    left: 25px
-    top: 265px
 
   div#day-2
-    position: absolute
-    left: 125px
-    top: 265px
+    left: 240px
+    opacity: .5

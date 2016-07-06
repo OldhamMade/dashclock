@@ -10,7 +10,7 @@ defmodule Dashclock.TFLController do
   def status(conn, _params) do
     data = Facts.TFL.get()
 
-    result = problem_lines(data)
+    result = problem_lines(data) ++ ["District", "Central", "Hammersmith & City"]
     |> Enum.sort
     |> Enum.join(", ")
 

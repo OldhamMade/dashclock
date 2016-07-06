@@ -8578,7 +8578,15 @@ var _user$project$WeatherApp$dayView = F2(
 				[
 					_user$project$WeatherApp$iconView(data),
 					_user$project$WeatherApp$tempView(data),
-					_user$project$WeatherApp$precipView(data)
+					_user$project$WeatherApp$precipView(data),
+					A2(
+					_elm_lang$html$Html$div,
+					_elm_lang$core$Native_List.fromArray(
+						[
+							_elm_lang$html$Html_Attributes$id('line')
+						]),
+					_elm_lang$core$Native_List.fromArray(
+						[]))
 				]));
 	});
 var _user$project$WeatherApp$view = function (model) {
@@ -8706,7 +8714,7 @@ var _user$project$WeatherApp$Request = function (a) {
 	return {ctor: 'Request', _0: a};
 };
 var _user$project$WeatherApp$subscriptions = function (model) {
-	return A2(_elm_lang$core$Time$every, _elm_lang$core$Time$minute * 3, _user$project$WeatherApp$Request);
+	return A2(_elm_lang$core$Time$every, _elm_lang$core$Time$minute * 5, _user$project$WeatherApp$Request);
 };
 var _user$project$WeatherApp$main = {
 	main: _elm_lang$html$Html_App$program(

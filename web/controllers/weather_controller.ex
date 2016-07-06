@@ -26,6 +26,7 @@ defmodule Dashclock.WeatherController do
   def overview(conn, _params) do
     ip = Facts.IP.get()
     latlon = Facts.LatLon.get(ip)
+    
     weather = Weather.Fetcher.get(latlon)
     |> forecast
     
