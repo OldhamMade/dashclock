@@ -105,7 +105,6 @@ dayView pos data =
         [ iconView data
         , tempView data
         , precipView data
-        , div [ id "line" ] [ ]
         ]
 
 

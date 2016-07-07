@@ -31,7 +31,7 @@ dateDisplay t =
       -- join sep [(pad 2 '0' hours'), (pad 2 '0' minutes')]
       div [ ] [ div [ id "month" ] [ text month' ]
               , div [ id "day" ] [ text day' ]
-              , div [ id "year" ] [ text year' ]
+              -- , div [ id "year" ] [ text year' ]
               ]
 
 

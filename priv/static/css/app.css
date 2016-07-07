@@ -16,7 +16,7 @@
     position: absolute;
     bottom: -50px;
     right: 15px;
-    font-size: 270px;
+    font-size: 265px;
     font-weight: 900;
     font-family: 'digital-7_monomono'; }
     /* line 23, /Users/phillipoldham/Projects/dashclock/web/sass/clock.sass */
@@ -44,8 +44,8 @@
   #clock-container #date {
     position: absolute;
     top: 5px;
-    right: 19px;
-    font-size: 48px;
+    right: 22px;
+    font-size: 90px;
     font-family: "digital-7_monomono"; }
     /* line 51, /Users/phillipoldham/Projects/dashclock/web/sass/clock.sass */
     #clock-container #date #day,
@@ -138,8 +138,8 @@ body {
 #weather-container {
   position: absolute;
   font-family: "Nova Mono";
-  top: 140px;
-  left: 40px;
+  top: 160px;
+  left: 20px;
   width: 500px;
   height: 250px; }
   /* line 9, /Users/phillipoldham/Projects/dashclock/web/sass/weather.sass */
@@ -239,13 +239,13 @@ body {
     #weather-container div#day-1 .temp-min,
     #weather-container div#day-2 .temp-max,
     #weather-container div#day-2 .temp-min {
-      font-size: 24px;
-      left: 150px; }
+      font-size: 28px;
+      left: 145px; }
     /* line 90, /Users/phillipoldham/Projects/dashclock/web/sass/weather.sass */
     #weather-container div#day-1 .temp-max,
     #weather-container div#day-2 .temp-max {
       position: absolute;
-      top: 10px;
+      top: 8px;
       line-height: 1.6em; }
     /* line 95, /Users/phillipoldham/Projects/dashclock/web/sass/weather.sass */
     #weather-container div#day-1 .temp-min,
@@ -264,8 +264,7 @@ body {
       width: 120px; }
   /* line 109, /Users/phillipoldham/Projects/dashclock/web/sass/weather.sass */
   #weather-container div#day-2 {
-    left: 240px;
-    opacity: .5; }
+    left: 240px; }
 
 
 /*# sourceMappingURL=app.css.map*/

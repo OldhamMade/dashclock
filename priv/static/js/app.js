@@ -14763,16 +14763,6 @@ var _user$project$ClockApp$dateDisplay = function (t) {
 				_elm_lang$core$Native_List.fromArray(
 					[
 						_elm_lang$html$Html$text(day$)
-					])),
-				A2(
-				_elm_lang$html$Html$div,
-				_elm_lang$core$Native_List.fromArray(
-					[
-						_elm_lang$html$Html_Attributes$id('year')
-					]),
-				_elm_lang$core$Native_List.fromArray(
-					[
-						_elm_lang$html$Html$text(year$)
 					]))
 			]));
 };
@@ -32778,15 +32768,7 @@ var _user$project$WeatherApp$dayView = F2(
 				[
 					_user$project$WeatherApp$iconView(data),
 					_user$project$WeatherApp$tempView(data),
-					_user$project$WeatherApp$precipView(data),
-					A2(
-					_elm_lang$html$Html$div,
-					_elm_lang$core$Native_List.fromArray(
-						[
-							_elm_lang$html$Html_Attributes$id('line')
-						]),
-					_elm_lang$core$Native_List.fromArray(
-						[]))
+					_user$project$WeatherApp$precipView(data)
 				]));
 	});
 var _user$project$WeatherApp$view = function (model) {
