@@ -8684,20 +8684,7 @@ var _user$project$WeatherApp$update = F2(
 				return {
 					ctor: '_Tuple2',
 					_0: _elm_lang$core$Native_List.fromArray(
-						[
-							{
-							time: 0,
-							temperatureMin: 0,
-							temperatureMax: 0,
-							temperature: 0,
-							precipType: '',
-							precipProbability: 0,
-							icon: 'error',
-							datetime: '',
-							date: '',
-							error: _elm_lang$core$Basics$toString(_p1._0)
-						}
-						]),
+						[]),
 					_1: _elm_lang$core$Platform_Cmd$none
 				};
 		}

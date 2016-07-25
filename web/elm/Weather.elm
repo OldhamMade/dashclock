@@ -61,23 +61,13 @@ update msg model =
         , getWeather
         )
 
-    FetchSucceed list ->
-        ( list
+    FetchSucceed results ->
+        ( results
         , Cmd.none
         )
 
     FetchFailed error ->
-        ( [{ time = 0
-           , temperatureMin = 0
-           , temperatureMax = 0
-           , temperature = 0
-           , precipType = ""
-           , precipProbability = 0
-           , icon = "error"
-           , datetime = ""
-           , date = ""
-           , error = toString error
-           }]
+        ( []
         , Cmd.none
         )
 

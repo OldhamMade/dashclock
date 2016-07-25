@@ -9255,6 +9255,7 @@ var _user$project$TFLStatusApp$view = function (data) {
 				displayState(data)
 			]));
 };
+var _user$project$TFLStatusApp$loading = {state: 'loading', lines: 'Loading...'};
 var _user$project$TFLStatusApp$Model = F2(
 	function (a, b) {
 		return {state: a, lines: b};
@@ -9278,11 +9279,7 @@ var _user$project$TFLStatusApp$getLineStatus = function () {
 		_user$project$TFLStatusApp$FetchSucceed,
 		A2(_evancz$elm_http$Http$get, _user$project$TFLStatusApp$resultDecoder, url));
 }();
-var _user$project$TFLStatusApp$init = {
-	ctor: '_Tuple2',
-	_0: {state: 'loading', lines: 'Loading...'},
-	_1: _user$project$TFLStatusApp$getLineStatus
-};
+var _user$project$TFLStatusApp$init = {ctor: '_Tuple2', _0: _user$project$TFLStatusApp$loading, _1: _user$project$TFLStatusApp$getLineStatus};
 var _user$project$TFLStatusApp$update = F2(
 	function (msg, model) {
 		var _p1 = msg;
@@ -9292,11 +9289,7 @@ var _user$project$TFLStatusApp$update = F2(
 			case 'FetchSucceed':
 				return {ctor: '_Tuple2', _0: _p1._0, _1: _elm_lang$core$Platform_Cmd$none};
 			default:
-				return {
-					ctor: '_Tuple2',
-					_0: {state: 'failed', lines: 'Unable to get line status'},
-					_1: _elm_lang$core$Platform_Cmd$none
-				};
+				return {ctor: '_Tuple2', _0: _user$project$TFLStatusApp$loading, _1: _elm_lang$core$Platform_Cmd$none};
 		}
 	});
 var _user$project$TFLStatusApp$Request = function (a) {

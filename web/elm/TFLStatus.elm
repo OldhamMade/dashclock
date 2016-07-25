@@ -27,10 +27,12 @@ type alias Model =
     }
 
 
+loading = { state = "loading",
+            lines = "Loading..." }
+    
 init : (Model, Cmd Msg)
 init =
-  ({ state = "loading",
-     lines = "Loading..." }
+  ( loading
   , getLineStatus
   )
 
@@ -57,7 +59,7 @@ update msg model =
         )
           
     FetchFailed _ ->
-        ( { state = "failed", lines = "Unable to get line status" }
+        ( loading
         , Cmd.none
         )
 

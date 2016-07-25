@@ -122,15 +122,18 @@ body {
       top: 0;
       left: 0; }
   /* line 23, /Users/phillipoldham/Projects/dashclock/web/sass/tflstatus.sass */
+  #tfl-status-container .loading {
+    opacity: .5; }
+  /* line 26, /Users/phillipoldham/Projects/dashclock/web/sass/tflstatus.sass */
   #tfl-status-container .loading i {
     color: #F60; }
-  /* line 26, /Users/phillipoldham/Projects/dashclock/web/sass/tflstatus.sass */
+  /* line 29, /Users/phillipoldham/Projects/dashclock/web/sass/tflstatus.sass */
   #tfl-status-container .problems i {
     color: #F00; }
-  /* line 29, /Users/phillipoldham/Projects/dashclock/web/sass/tflstatus.sass */
+  /* line 32, /Users/phillipoldham/Projects/dashclock/web/sass/tflstatus.sass */
   #tfl-status-container .ok i {
     color: #0C0; }
-  /* line 32, /Users/phillipoldham/Projects/dashclock/web/sass/tflstatus.sass */
+  /* line 35, /Users/phillipoldham/Projects/dashclock/web/sass/tflstatus.sass */
   #tfl-status-container .unknown i {
     color: #99F; }
 
