@@ -74,6 +74,8 @@ Copy the `_pi/uzbl.conf` file to `/home/pi/uzbl.conf`, then copy the
 
 ### Extras
 
+#### Quieten boot
+
 Edit the `/boot/cmdline.txt` file and make these changes:
 
   1. Replace `console=tty1` with `console=tty3` to redirect boot messages to the third console.
@@ -82,6 +84,14 @@ Edit the `/boot/cmdline.txt` file and make these changes:
   4. Add `logo.nologo` to disable the small raspberry pi logos
 
 More details can be found [here](http://elinux.org/RPi_cmdline.txt).
+
+#### Add boot image
+
+Copy the `_pi/pisplash.png` file to `/etc/pisplash.png`, and `_pi/asplashscreen`
+to `/etc/init.d/asplashscreen`. Then execute the following;
+
+    $ sudo chmod a+x /etc/init.d/asplashscreen
+    $ sudo insserv /etc/init.d/asplashscreen
 
 ## Install
 

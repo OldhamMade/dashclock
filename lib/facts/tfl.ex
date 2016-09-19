@@ -4,47 +4,11 @@ defmodule Dashclock.Facts.TFL do
     Poison.decode!(response.body)
   end
 
-  defp settings() do
-    File.cwd! <> "/settings.yaml"
-  end
-
   defp url() do
-    [ document | _ ] = :yamerl_constr.file(settings)
-    
-    url = :proplists.get_value(
-      'TFL',
-      :proplists.get_value(
-        'APICalls',
-        document
-      )
-    )
-    |> to_string
+    apiid = Application.get_env(:dashclock, :api_keys)[:tfl_id]
+    apikey = Application.get_env(:dashclock, :api_keys)[:tfl_key]
 
-    apiid = :proplists.get_value(
-      'id', 
-      :proplists.get_value(
-        'TFL',
-        :proplists.get_value(
-          'APIKeys',
-          document
-        )
-      )
-    )
-    |> to_string
-
-    apikey = :proplists.get_value(
-      'key', 
-      :proplists.get_value(
-        'TFL',
-        :proplists.get_value(
-          'APIKeys',
-          document
-        )
-      )
-    )
-    |> to_string
-
-    url
+    Application.get_env(:dashclock, :api_urls)[:tfl]
     |> String.replace("{id}", apiid)
     |> String.replace("{key}", apikey)
 

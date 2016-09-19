@@ -18,6 +18,19 @@ config :logger, :console,
   format: "$time $metadata[$level] $message\n",
   metadata: [:request_id]
 
-# Import environment specific config. This must remain at the bottom
+# custom settings
+
+config :dashclock, :api_keys,
+  forecastio_id: "23441ba59d9294a1fabbab88c90b6dcc",
+  tfl_id: "1f7d6c98",
+  tfl_key: "4460186a9dabfafa9b1a839072c50325"
+
+config :dashclock, :api_urls,
+  ip: "https://api.ipify.org",
+  location: "http://ip-api.com/json/{ip}",
+  weather: "https://api.forecast.io/forecast/{apikey}/{lat},{lon}?units=si",
+  tfl: "https://api.tfl.gov.uk/line/mode/tube/status?app_id={id}&app_key={key}"
+
+# import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env}.exs"

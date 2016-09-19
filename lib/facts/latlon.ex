@@ -5,22 +5,8 @@ defmodule Dashclock.Facts.LatLon do
     [lat: parsed["lat"], lon: parsed["lon"]]
   end
 
-  def settings() do
-    File.cwd! <> "/settings.yaml"
-  end
-
   def url_for(ip) do
-    [ document | _ ] = :yamerl_constr.file(settings)
-    url = :proplists.get_value(
-      'Location',
-      :proplists.get_value(
-        'APICalls',
-        document
-      )
-    )
-
-    url
-    |> to_string
+    Application.get_env(:dashclock, :api_urls)[:location]
     |> String.replace("{ip}", ip)
   end
 end

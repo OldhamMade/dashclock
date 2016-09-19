@@ -4,18 +4,7 @@ defmodule Dashclock.Facts.IP do
     response.body
   end
 
-  defp settings() do
-    File.cwd! <> "/settings.yaml"
-  end
-
   defp url() do
-    [ document | _ ] = :yamerl_constr.file(settings)
-    :proplists.get_value(
-      'IP',
-      :proplists.get_value(
-        'APICalls',
-        document
-      )
-    )
+    Application.get_env(:dashclock, :api_urls)[:ip]
   end
 end
