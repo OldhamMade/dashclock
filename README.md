@@ -35,7 +35,53 @@ an overview for the next 2 days.
 
 ## Setup
 
-*Instructions to follow.*
+Burn Raspian to an SD card, and boot once to resize the image. Boot again, and
+shell into the pi.
+
+You might get a warning about locales, if you do, run this command:
+
+    $ sudo dpkg-reconfigure locales
+
+and set your locale to `en_US.UTF-8`. When you next connect the error shouldn't show.
+We should also update the system:
+
+    $ sudo apt-get update && sudo apt-get upgrade -y
+
+Now that we're up to date, we'll install the base system. Our goal is to set up a
+system where:
+
+  1. the system boots and a user is logged in automatically
+  2. the webserver starts
+  3. the window manager starts
+  4. the web browser starts in full screen
+
+For step 1, we'll use `nodm`:
+
+    $ sudo apt-get install nodm -y
+
+Once installed, edit `/etc/default/nodm` and set the following:
+
+    NODM_ENABLED=true
+    NODM_USER=pi
+
+Next we need a window manager, a browser, and some way to start all this up:
+
+    $ sudo apt-get install -y matchbox-window-manager uzbl xinit unclutter
+
+Copy the `_pi/uzbl.conf` file to `/home/pi/uzbl.conf`, then copy the
+`_pi/_xsession` file to `/home/pi/.xsession` and set the permissions to 700.
+
+
+### Extras
+
+Edit the `/boot/cmdline.txt` file and make these changes:
+
+  1. Replace `console=tty1` with `console=tty3` to redirect boot messages to the third console.
+  2. Add `loglevel=3` to disable non-critical kernel log messages.
+  3. Add `vt.global_cursor_default=0` to disable the blinking cursor.
+  4. Add `logo.nologo` to disable the small raspberry pi logos
+
+More details can be found [here](http://elinux.org/RPi_cmdline.txt).
 
 ## Install
 

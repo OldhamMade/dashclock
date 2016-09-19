@@ -1,0 +1,16 @@
+#!/bin/bash
+xset -dpms  
+xset s off
+
+# Wait until the clock is ready
+while ! curl -s -o /dev/null http://127.0.0.1:4000; do  
+  sleep 10
+done
+
+exec matchbox-window-manager -use_titlebar no &  
+
+while true; do  
+  # Sometimes uzbl gets killed due to memory issues, this loop makes sure
+  # it starts back up
+  uzbl -u http://127.0.0.1:4000/ -c /home/pi/uzbl.conf
+done 
