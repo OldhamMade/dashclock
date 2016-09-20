@@ -15,30 +15,9 @@ defmodule Dashclock.Facts.MoonPhase do
     |> Map.fetch!("moonPhase")
   end
 
-  def settings() do
-    File.cwd! <> "/settings.yaml"
-  end
-
   def url_for(lat, lon) do
-    [ document | _ ] = :yamerl_constr.file(settings)
-    
-    apikey = :proplists.get_value(
-      'forecast.io',
-      :proplists.get_value(
-        'APIKeys',
-        document
-      )
-    )
-    |> to_string
-    
-    url = :proplists.get_value(
-      'Weather',
-      :proplists.get_value(
-        'APICalls',
-        document
-      )
-    )
-    |> to_string
+    apikey = Application.get_env(:dashclock, :api_keys)[:forecastio_id]
+    url = Application.get_env(:dashclock, :api_urls)[:weather]
 
     url
     |> String.replace("{apikey}", apikey)

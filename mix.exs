@@ -22,14 +22,13 @@ defmodule Dashclock.Mixfile do
        :phoenix_pubsub,
        :phoenix_html,
        :cowboy,
-       :exrm,
+       :distillery,
        :logger,
        :ja_serializer,
        :gettext,
        :httpotion,
        :certifi,
        :timex,
-       :yamerl,
        :hackney,
      ]]
   end
@@ -48,13 +47,12 @@ defmodule Dashclock.Mixfile do
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:gettext, "~> 0.11"},
      {:cowboy, "~> 1.0"},
-     {:exrm, "~> 0.14.2"},
+     {:distillery, "~> 0.9"},
      {:httpotion, "~> 3.0.0"},
      {:ja_serializer, "~> 0.9.0"},
      {:timex, "~> 2.2"},
      {:certifi, "~> 0.4.0"},
      {:hackney, "~> 1.6"},
-     {:yamerl, github: "yakaz/yamerl"},
     ]
   end
 end
