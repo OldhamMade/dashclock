@@ -1,4 +1,4 @@
-%% script generated at {2016,9,20} {7,39,49}
+%% script generated at {2016,9,20} {7,57,11}
 {script,
     {"dashclock","0.1.0"},
     [{preLoaded,
