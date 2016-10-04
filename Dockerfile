@@ -1,21 +1,17 @@
-FROM trenpixster/elixir
+#FROM resin/rpi-raspbian:jessie
+FROM thewtex/cross-compiler-linux-armv6
 
-ENV VERSION 0.1.0
+RUN mkdir /code
+WORKDIR /code
 
-RUN mkdir /app
-WORKDIR /app
-# COPY ./rel/dashclock/releases/$VERSION/dashclock.tar.gz /app/dashclock.tar.gz
-# RUN tar -zxvf dashclock.tar.gz
+RUN curl -L http://packages.erlang-solutions.com/debian/erlang_solutions.asc > erlang_solutions.asc
+RUN apt-key add erlang_solutions.asc
 
-# COPY . /app
+RUN echo "deb http://packages.erlang-solutions.com/debian jessie contrib" >> /etc/apt/sources.list
+RUN apt-get update -y
 
-RUN git clone https://github.com/OldhamMade/dashclock.git .
-RUN git pull
-RUN mix deps.get deps.compile
-RUN MIX_ENV=prod mix release --env=prod
+RUN apt-get install -y erlang-base erlang-dev erlang-crypto erlang-parsetools erlang-ssh erlang-ssl elixir
 
-# WORKDIR /app/releases/$VERSION
-# ENTRYPOINT ["./dashclock.sh"]
+RUN mix local.hex --force
 
-ENTRYPOINT ["/app/rel/dashclock/bin/dashclock"]
-CMD ["foreground"]
+COPY . /code

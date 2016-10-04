@@ -81,6 +81,11 @@ erl_crash.dump
 *.ez
 
 
+### Phoenix
+
+/uploads/files/*
+
+
 ### https://raw.github.com/github/gitignore/e662d21883ecfa868d585b9378841725018953e1/Erlang.gitignore
 
 .eunit
@@ -150,3 +155,6 @@ jspm_packages
 *.css.map
 
 
+### Locals
+
+/rel/dashclock
