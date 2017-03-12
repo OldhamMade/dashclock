@@ -47,8 +47,11 @@ We should also update the system:
 
     $ sudo apt-get update && sudo apt-get upgrade -y
 
-Now that we're up to date, we'll install the base system. Our goal is to set up a
-system where:
+Now that we're up to date, we'll install some dependencies for the screen:
+
+    $ sudo apt-get install raspberrypi-ui-mods raspberrypi-net-mods
+
+And then the base system. Our goal is to set up a system where:
 
   1. the system boots and a user is logged in automatically
   2. the webserver starts

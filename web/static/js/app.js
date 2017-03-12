@@ -26,3 +26,5 @@ const tflStatusDiv = document.querySelector("#tfl-status-container");
 const tflStatusApp = Elm.TFLStatusApp.embed(tflStatusDiv);
 const weatherDiv = document.querySelector("#weather-container");
 const weatherApp = Elm.WeatherApp.embed(weatherDiv);
+const sensorDataDiv = document.querySelector("#sensor-data-container");
+const sensorDataApp = Elm.SensorDataApp.embed(sensorDataDiv);

@@ -25,5 +25,7 @@ defmodule Dashclock.Router do
     get "/tfl", TFLController, :status
 
     get "/weather", WeatherController, :overview
+
+    get "/temp", TempController, :data
   end
 end

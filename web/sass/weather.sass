@@ -1,7 +1,7 @@
 #weather-container
   position: absolute
-  font-family: "Nova Mono"
-  top: 160px
+  font-family: "Helvetica"
+  top: 120px
   left: 20px
   width: 500px
   height: 250px
@@ -16,95 +16,191 @@
   div#day-1,
   div#day-2
     position: absolute
-    width: 500px
-    height: 200px
+    width: 280px
+    height: 120px
+    right: 0
 
     .icon
       position: absolute
-      width: 200px
-      height: 200px
-      top: 0
-      left: 0
-      font-size: 150px
-      vertical-align: bottom
-
-    .temp-current
-      position: absolute
-      top: 20px
-      left: 200px
-      font-size: 100px
-      width: 120px
-      text-align: right
-
-    .temp-max,
-    .temp-min
-      font-size: 30px
-      left: 340px
-
-    .temp-max
-      position: absolute
-      top: 44px
-      line-height: 1.6em
-
-    .temp-min
-      position: absolute
-      top: 90px
-      border-top: 1px solid #AAA
-      line-height: 1.6em
-
-    .precip
-      position: absolute
-      /* top: 150px
-      /* left: 200px
-      top: 70px
-      left: 385px
-      font-size: 30px
-      width: 120px
-
-  div#day-1,
-  div#day-2
-    position: absolute
-    top: 200px
-    left: 0
-    width: 500px
-    height: 100px
-    opacity: .8
-
-    .icon
-      position: absolute
-      width: 150px
-      height: 100px
-      top: 0
+      width: 180px
+      height: 110px
+      top: 10px
       left: 0
       font-size: 80px
-      vertical-align: middle
+      line-height: 100px
+      vertical-align: bottom
 
-    .temp-current
-      display: none
-
-    .temp-max,
-    .temp-min
-      font-size: 28px
-      left: 145px
-
-    .temp-max
+    .temperatures
       position: absolute
-      top: 8px
-      line-height: 1.6em
+      width: 120px
+      right: 0
+      top: 20px
+      font-size: 40px
+      text-align: center
 
-    .temp-min
-      position: absolute
-      top: 50px
-      border-top: 1px solid #AAA
-      line-height: 1.6em
+      div
+        display: inline
+
+      .temp-current
+        display: none
+
+      .temp-min
+        color: #999
+
+      .sep
+        margin: 0 .1em
 
     .precip
       position: absolute
-      top: 36px
-      left: 180px
-      font-size: 20px
+      top: 70px
+      right: 0
       width: 120px
+      font-size: 20px
 
+      i
+        float: left
+
+      .precip-bar
+        float: left
+        width: 85px
+        height: 15px
+        background-color: #444
+        border-radius: 10px
+        overflow: hidden
+        border: 1px solid #444
+
+        .precip-percent
+          height: 15px
+          background-color: #FFF
+
+  div#day-1
+    opacity: .6
+    top: 120px
 
   div#day-2
-    left: 240px
+    opacity: .4
+    top: 240px
+
+
+  div#day-0
+    .temp-current
+      display: block !important
+      position: absolute
+      top: -20px
+      left: -380px
+      height: 100px
+      width: 100px
+      font-family: "Oswald"
+      font-size: 80px
+      letter-spacing: -.03em
+      line-height: 100px
+      text-align: right
+
+    /*   position: absolute
+    /*   top: 20px
+    /*   left: 200px
+    /*   font-size: 100px
+    /*   width: 120px
+    /*   text-align: right
+
+    /* .temp-max,
+    /* .temp-min
+    /*   font-size: 30px
+    /*   left: 340px
+
+  /* div#day-0,
+  /* div#day-1,
+  /* div#day-2
+  /*   position: absolute
+  /*   width: 500px
+  /*   height: 200px
+
+  /*   .icon
+  /*     position: absolute
+  /*     width: 200px
+  /*     height: 200px
+  /*     top: 0
+  /*     left: 0
+  /*     font-size: 150px
+  /*     vertical-align: bottom
+
+  /*   .temp-current
+  /*     position: absolute
+  /*     top: 20px
+  /*     left: 200px
+  /*     font-size: 100px
+  /*     width: 120px
+  /*     text-align: right
+
+  /*   .temp-max,
+  /*   .temp-min
+  /*     font-size: 30px
+  /*     left: 340px
+
+  /*   .temp-max
+  /*     position: absolute
+  /*     top: 44px
+  /*     line-height: 1.6em
+
+  /*   .temp-min
+  /*     position: absolute
+  /*     top: 90px
+  /*     border-top: 1px solid #AAA
+  /*     line-height: 1.6em
+
+  /*   .precip
+  /*     position: absolute
+  /*     /* top: 150px
+  /*     /* left: 200px
+  /*     top: 70px
+  /*     left: 385px
+  /*     font-size: 30px
+  /*     width: 120px
+
+  /* div#day-1,
+  /* div#day-2
+  /*   position: absolute
+  /*   top: 200px
+  /*   left: 0
+  /*   width: 500px
+  /*   height: 100px
+  /*   opacity: .8
+
+  /*   .icon
+  /*     position: absolute
+  /*     width: 150px
+  /*     height: 100px
+  /*     top: 0
+  /*     left: 0
+  /*     font-size: 80px
+  /*     vertical-align: middle
+
+  /*   .temp-current
+  /*     display: none
+
+  /*   .temp-max,
+  /*   .temp-min
+  /*     font-size: 28px
+  /*     left: 145px
+
+  /*   .temp-max
+  /*     position: absolute
+  /*     top: 8px
+  /*     line-height: 1.6em
+
+  /*   .temp-min
+  /*     position: absolute
+  /*     top: 50px
+  /*     border-top: 1px solid #AAA
+  /*     line-height: 1.6em
+
+  /*   .precip
+  /*     position: absolute
+  /*     top: 36px
+  /*     left: 180px
+  /*     font-size: 20px
+  /*     width: 120px
+
+
+  /* div#day-2
+  /*   left: 240px
