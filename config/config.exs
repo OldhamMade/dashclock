@@ -21,14 +21,14 @@ config :logger, :console,
 # custom settings
 
 config :dashclock, :api_keys,
-  forecastio_id: "23441ba59d9294a1fabbab88c90b6dcc",
+  darksky_id: "23441ba59d9294a1fabbab88c90b6dcc",
   tfl_id: "1f7d6c98",
   tfl_key: "4460186a9dabfafa9b1a839072c50325"
 
 config :dashclock, :api_urls,
   ip: "https://api.ipify.org",
   location: "http://ip-api.com/json/{ip}",
-  weather: "https://api.forecast.io/forecast/{apikey}/{lat},{lon}?units=si",
+  weather: "https://api.darksky.net/forecast/{apikey}/{lat},{lon}?units=si",
   tfl: "https://api.tfl.gov.uk/line/mode/tube,dlr/status?app_id={id}&app_key={key}",
   seriesly: "http://192.168.1.201:3133/sensors/_query"
 

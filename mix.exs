@@ -3,7 +3,7 @@ defmodule Dashclock.Mixfile do
 
   def project do
     [app: :dashclock,
-     version: "0.1.1",
+     version: "0.1.2",
      elixir: "~> 1.2",
      elixirc_paths: elixirc_paths(Mix.env),
      compilers: [:phoenix, :gettext] ++ Mix.compilers,
@@ -26,7 +26,7 @@ defmodule Dashclock.Mixfile do
        :logger,
        :ja_serializer,
        :gettext,
-       :httpotion,
+       :httpoison,
        :certifi,
        :timex,
        :hackney,
@@ -48,11 +48,11 @@ defmodule Dashclock.Mixfile do
      {:gettext, "~> 0.11"},
      {:cowboy, "~> 1.0"},
      {:exrm, "~> 1.0"},
-     {:httpotion, "~> 3.0.0"},
      {:ja_serializer, "~> 0.9.0"},
      {:timex, "~> 3.0"},
      {:certifi, "~> 0.7.0"},
      {:hackney, "~> 1.6.5"},
+     {:httpoison, "~> 0.10.0"},
     ]
   end
 end

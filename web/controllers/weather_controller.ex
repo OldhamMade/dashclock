@@ -44,8 +44,7 @@ defmodule Dashclock.WeatherController do
   end
 
   def from_timestamp(timestamp, format \\ "{ISO:Extended}") do
-    datetime = Timex.Time.from(timestamp, :seconds)
-    |> Timex.DateTime.from_timestamp
+    Timex.from_unix(timestamp, :seconds)
     |> Timex.format!(format)
   end
 

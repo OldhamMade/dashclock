@@ -1,6 +1,6 @@
 defmodule Dashclock.Facts.TFL do
   def get() do
-    response = HTTPotion.get(url, [timeout: 100_000])
+    response = HTTPoison.get!(url, [timeout: 100_000])
     Poison.decode!(response.body)
   end
 

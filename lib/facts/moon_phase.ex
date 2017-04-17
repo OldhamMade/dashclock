@@ -1,7 +1,7 @@
 defmodule Dashclock.Facts.MoonPhase do
   def get(lat: lat, lon: lon) do
     url = url_for(lat, lon)
-    response = HTTPotion.get(url, [timeout: 50_000])
+    response = HTTPoison.get!(url, [timeout: 50_000])
     parsed = Poison.decode!(response.body)
 
     moon_phase(parsed)

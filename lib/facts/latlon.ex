@@ -1,6 +1,6 @@
 defmodule Dashclock.Facts.LatLon do
   def get(ip) do
-    response = HTTPotion.get(url_for(ip), [timeout: 50_000])
+    response = HTTPoison.get!(url_for(ip), [timeout: 50_000])
     parsed = Poison.decode!(response.body)
     [lat: parsed["lat"], lon: parsed["lon"]]
   end
