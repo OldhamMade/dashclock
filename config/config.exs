@@ -29,7 +29,13 @@ config :dashclock, :api_urls,
   ip: "https://api.ipify.org",
   location: "http://ip-api.com/json/{ip}",
   weather: "https://api.forecast.io/forecast/{apikey}/{lat},{lon}?units=si",
-  tfl: "https://api.tfl.gov.uk/line/mode/tube,dlr/status?app_id={id}&app_key={key}"
+  tfl: "https://api.tfl.gov.uk/line/mode/tube,dlr/status?app_id={id}&app_key={key}",
+  seriesly: "http://192.168.1.201:3133/sensors/_query"
+
+config :dashclock, :seriesly,
+  group: "300000",
+  collect: [{"/temperature", "avg"}, {"/humidity", "avg"}],
+  filter: {"/location", "bedroom"}
 
 # import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.

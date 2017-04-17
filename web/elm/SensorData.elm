@@ -20,9 +20,8 @@ main =
 
 
 type alias Model =
-    { temp_c: Float
-    , temp_f: Float
-    , humidity_pc: Float
+    { temp: Float
+    , humidity: Float
     }
 
 
@@ -32,9 +31,8 @@ type Msg
 
 
 loading =
-    { temp_c = 0.0
-    , temp_f = 0.0
-    , humidity_pc = 0.0
+    { temp = 0.0
+    , humidity = 0.0
     }
 
 
@@ -80,23 +78,22 @@ view model =
 tempView : Model -> Html Msg
 tempView data =
     div [ id "indoor-temp" ]
-        [ text ("/" ++ (toString <| round <| data.temp_c)) ]
+        [ text ("/" ++ (toString <| round <| data.temp)) ]
 
 
 humidityView : Model -> Html Msg
 humidityView data =
     div [ id "indoor-humidity" ]
-        [ text (( toString <| round <| data.humidity_pc) ++ "%") ]
+        [ text (( toString <| round <| data.humidity) ++ "%") ]
 
 
 getModel =
-    Http.get "/api/temp" decodeModel
+    Http.get "/api/sensors" decodeModel
         |> Http.send FetchResponse
 
 
 decodeModel : Json.Decode.Decoder Model
 decodeModel =
     Pipeline.decode Model
-        |> Pipeline.required "temp_c" float
-        |> Pipeline.required "temp_f" float
-        |> Pipeline.required "humidity_pc" float
+        |> Pipeline.required "temp" float
+        |> Pipeline.required "humidity" float

@@ -50,9 +50,9 @@ defmodule Dashclock.Mixfile do
      {:exrm, "~> 1.0"},
      {:httpotion, "~> 3.0.0"},
      {:ja_serializer, "~> 0.9.0"},
-     {:timex, "~> 2.2"},
-     {:certifi, "~> 0.4.0"},
-     {:hackney, "~> 1.6"},
+     {:timex, "~> 3.0"},
+     {:certifi, "~> 0.7.0"},
+     {:hackney, "~> 1.6.5"},
     ]
   end
 end

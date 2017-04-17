@@ -27,5 +27,7 @@ defmodule Dashclock.Router do
     get "/weather", WeatherController, :overview
 
     get "/temp", TempController, :data
+
+    get "/sensors", SerieslyController, :latest
   end
 end

@@ -9012,7 +9012,7 @@ var _user$project$SensorDataApp$humidityView = function (data) {
 				A2(
 					_elm_lang$core$Basics_ops['++'],
 					_elm_lang$core$Basics$toString(
-						_elm_lang$core$Basics$round(data.humidity_pc)),
+						_elm_lang$core$Basics$round(data.humidity)),
 					'%')),
 			_1: {ctor: '[]'}
 		});
@@ -9032,7 +9032,7 @@ var _user$project$SensorDataApp$tempView = function (data) {
 					_elm_lang$core$Basics_ops['++'],
 					'/',
 					_elm_lang$core$Basics$toString(
-						_elm_lang$core$Basics$round(data.temp_c)))),
+						_elm_lang$core$Basics$round(data.temp)))),
 			_1: {ctor: '[]'}
 		});
 };
@@ -9054,31 +9054,27 @@ var _user$project$SensorDataApp$view = function (model) {
 			}
 		});
 };
-var _user$project$SensorDataApp$loading = {temp_c: 0.0, temp_f: 0.0, humidity_pc: 0.0};
-var _user$project$SensorDataApp$Model = F3(
-	function (a, b, c) {
-		return {temp_c: a, temp_f: b, humidity_pc: c};
+var _user$project$SensorDataApp$loading = {temp: 0.0, humidity: 0.0};
+var _user$project$SensorDataApp$Model = F2(
+	function (a, b) {
+		return {temp: a, humidity: b};
 	});
 var _user$project$SensorDataApp$decodeModel = A3(
 	_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
-	'humidity_pc',
+	'humidity',
 	_elm_lang$core$Json_Decode$float,
 	A3(
 		_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
-		'temp_f',
+		'temp',
 		_elm_lang$core$Json_Decode$float,
-		A3(
-			_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
-			'temp_c',
-			_elm_lang$core$Json_Decode$float,
-			_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$decode(_user$project$SensorDataApp$Model))));
+		_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$decode(_user$project$SensorDataApp$Model)));
 var _user$project$SensorDataApp$FetchResponse = function (a) {
 	return {ctor: 'FetchResponse', _0: a};
 };
 var _user$project$SensorDataApp$getModel = A2(
 	_elm_lang$http$Http$send,
 	_user$project$SensorDataApp$FetchResponse,
-	A2(_elm_lang$http$Http$get, '/api/temp', _user$project$SensorDataApp$decodeModel));
+	A2(_elm_lang$http$Http$get, '/api/sensors', _user$project$SensorDataApp$decodeModel));
 var _user$project$SensorDataApp$init = {ctor: '_Tuple2', _0: _user$project$SensorDataApp$loading, _1: _user$project$SensorDataApp$getModel};
 var _user$project$SensorDataApp$update = F2(
 	function (msg, model) {
