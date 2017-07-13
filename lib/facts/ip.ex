@@ -1,6 +1,6 @@
 defmodule Dashclock.Facts.IP do
   def get() do
-    response = HTTPoison.get!(url, [timeout: 50_000])
+    response = HTTPoison.get!(url, [timeout: 1000_000])
     response.body
   end
 

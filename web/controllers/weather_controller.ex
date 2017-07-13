@@ -1,8 +1,6 @@
 defmodule Dashclock.WeatherController do
   use Dashclock.Web, :controller
   use Timex
-  alias Dashclock.Facts
-  alias Dashclock.Weather
 
   @map_keys ~w(
     icon
@@ -24,10 +22,7 @@ defmodule Dashclock.WeatherController do
   }
 
   def overview(conn, _params) do
-    ip = Facts.IP.get()
-    latlon = Facts.LatLon.get(ip)
-    
-    weather = Weather.Fetcher.get(latlon)
+    weather = Dashclock.Weather.get()
     |> forecast
     
     json(conn, weather)

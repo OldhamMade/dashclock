@@ -1,6 +1,5 @@
 defmodule Dashclock.TFLController do
   use Dashclock.Web, :controller
-  alias Dashclock.Facts
 
   # Based on severity list here:
   # https://api.tfl.gov.uk/Line/Meta/Severity
@@ -8,7 +7,7 @@ defmodule Dashclock.TFLController do
   @severity_ok [9, 10, 18, 19]
 
   def status(conn, _params) do
-    data = Facts.TFL.get()
+    data = Dashclock.TFL.get()
 
     result = problem_lines(data)
     |> Enum.sort

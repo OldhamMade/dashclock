@@ -10,6 +10,8 @@ defmodule Dashclock do
     children = [
       # Start the endpoint when the application starts
       supervisor(Dashclock.Endpoint, []),
+      worker(Dashclock.Weather, []),
+      worker(Dashclock.TFL, []),
       # Start your own worker by calling: Dashclock.Worker.start_link(arg1, arg2, arg3)
       # worker(Dashclock.Worker, [arg1, arg2, arg3]),
       # worker(Dashclock.Facts.SensorServer, [[name: :sensor_server]])
