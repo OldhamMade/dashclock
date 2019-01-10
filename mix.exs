@@ -53,6 +53,7 @@ defmodule Dashclock.Mixfile do
      {:certifi, "~> 0.7.0"},
      {:hackney, "~> 1.6.5"},
      {:httpoison, "~> 0.10.0"},
+     {:distillery, "~> 1.5"},
     ]
   end
 end

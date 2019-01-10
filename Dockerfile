@@ -1,17 +1,38 @@
-#FROM resin/rpi-raspbian:jessie
-FROM thewtex/cross-compiler-linux-armv6
+FROM elixir:1.6.5-alpine
 
-RUN mkdir /code
-WORKDIR /code
+ENV PACKAGES="\
+build-base \
+ca-certificates \
+inotify-tools \
+jemalloc \
+nodejs \
+tini \
+"
 
-RUN curl -L http://packages.erlang-solutions.com/debian/erlang_solutions.asc > erlang_solutions.asc
-RUN apt-key add erlang_solutions.asc
+RUN apk update && \
+    apk upgrade && \
+    apk add --no-cache $PACKAGES || \
+      (sed -i -e 's/dl-cdn/dl-4/g' /etc/apk/repositories && apk add --no-cache $PACKAGES) && \
+    ln -s /usr/include/locale.h /usr/include/xlocale.h && \
+    update-ca-certificates && \
+    rm -rf /var/cache/apk/* && \
+    rm -rf /tmp/*
 
-RUN echo "deb http://packages.erlang-solutions.com/debian jessie contrib" >> /etc/apt/sources.list
-RUN apt-get update -y
+RUN mix local.hex --force && \
+    mix local.rebar --force && \
+    mix archive.install --force https://github.com/phoenixframework/archives/raw/master/phx_new.ez
 
-RUN apt-get install -y erlang-base erlang-dev erlang-crypto erlang-parsetools erlang-ssh erlang-ssl elixir
+ADD . /app
 
-RUN mix local.hex --force
+WORKDIR /app
 
-COPY . /code
+ENV MIX_ENV=prod
+
+RUN npm install && \
+    brunch build --production
+
+RUN rm -Rf _build && \
+    mix deps.get --only prod && \
+    mix compile && \
+    mix phx.digest && \
+    mix release
